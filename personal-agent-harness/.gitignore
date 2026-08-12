@@ -1,0 +1,14 @@
+node_modules/
+dist/
+coverage/
+.harness/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+eval-results/
+harness.config.json
+harness.eval.config.json
+.venv-swebench/
+.venv-swebench-grader/
+__pycache__/
+*.pyc

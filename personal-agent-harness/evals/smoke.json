@@ -1,0 +1,22 @@
+{
+	"name": "coding-smoke",
+	"cases": [
+		{
+			"id": "write-file",
+			"input": "创建 output.txt，文件内容必须严格为 harness-ok，末尾可以有换行。",
+			"timeoutMs": 120000,
+			"tags": ["smoke", "file"],
+			"graders": [
+				{ "type": "file", "path": "output.txt", "contains": "harness-ok" },
+				{ "type": "command", "command": "test \"$(tr -d '\\n\\r' < output.txt)\" = \"harness-ok\"" },
+				{
+					"type": "trace",
+					"toolCalled": "write",
+					"permissionAction": "allow",
+					"maxTurns": 4,
+					"maxTokens": 12000
+				}
+			]
+		}
+	]
+}

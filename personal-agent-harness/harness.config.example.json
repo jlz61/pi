@@ -1,0 +1,20 @@
+{
+	"provider": "deepseek",
+	"model": "deepseek-v4-pro",
+	"dataDir": ".harness",
+	"systemPrompt": "你是一个谨慎的编码智能体。修改前先检查文件，修改后执行验证。",
+	"network": {
+		"proxy": "auto",
+		"connectTimeoutMs": 15000
+	},
+	"swebench": {
+		"pythonExecutable": ".venv-swebench/bin/python",
+		"graderPythonExecutable": ".venv-swebench-grader/bin/python"
+	},
+	"permissions": [
+		{ "tool": "read", "resource": "*", "action": "allow" },
+		{ "tool": "write", "resource": "*", "action": "deny" },
+		{ "tool": "edit", "resource": "*", "action": "deny" },
+		{ "tool": "exec", "resource": "*", "action": "deny" }
+	]
+}

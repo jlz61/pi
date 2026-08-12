@@ -1,0 +1,12 @@
+{
+	"type": "swebench",
+	"name": "swebench-lite-dev",
+	"dataset": {
+		"path": "../eval-results/cache/swebench-lite/dataset/dev.parquet",
+		"split": "dev",
+		"instanceIds": ["sqlfluff__sqlfluff-1625"]
+	},
+	"timeoutMs": 900000,
+	"maxCost": 1,
+	"tags": ["swebench", "lite", "dev"]
+}
